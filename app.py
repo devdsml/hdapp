@@ -14,7 +14,7 @@ app = dash.Dash()
 auth = dash_auth.BasicAuth(app,USERNAME_PASSWORD_PAIRS)
 server = app.server
 app.layout = html.Div([
-    dcc.Dropdown(['Mumbai Indians', 'MTL', 'SF'], 'NYC', id='baseddown'),
+    dcc.Dropdown(['Mumbai Indians', 'Chennai Super Kings', 'Royal Challengers Bangalore'], 'Mumbai Indians', id='baseddown'),
     html.Div(dcc.Graph(
        id='graph-1',
       ))
@@ -22,7 +22,7 @@ app.layout = html.Div([
 
 
 @app.callback(
-    Output('graph-1', 'children'),
+    Output('graph-1','figure'),
     Input('baseddown', 'value')
 )
 def update_graph(value):
