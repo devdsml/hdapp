@@ -21,9 +21,9 @@ app.layout = html.Div([
         max=6,
         marks={i:str(i) for i in range(-5, 7)},
         value=[-3, 4]
-    ),
+    )]),
     html.H1(id='product')  # this is the output,
- dcc.Dropdown(['NYC', 'MTL', 'SF'], 'NYC', id='demo-dropdown'),
+ html.Div([dcc.Dropdown(['NYC', 'MTL', 'SF'], 'NYC', id='demo-dropdown'),
     html.Div(id='dd-output-container')
 ], style={'width':'50%'})
  
