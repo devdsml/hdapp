@@ -28,7 +28,7 @@ app.layout = html.Div([
 def update_graph(value):
       df1 = df[df['winner'] ==value]
       fig5=px.bar(df1,x='venue',title='Luckiest Venue')
-      fig5.update_traces(textinfo="label+value",textposition='inside')
+      
       return fig5
  
 if __name__ == '__main__':
